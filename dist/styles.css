@@ -138,8 +138,13 @@ address { font-style: normal; }
 .check-list li { display: flex; align-items: center; gap: 6px; list-style: none; }
 .check-icon { width: 20px; height: 20px; display: inline-grid; flex: 0 0 auto; place-items: center; border-radius: 50%; background: var(--yellow); color: var(--violet); font-weight: 900; }
 .feature-images { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; align-items: end; }
-.feature-images img, .store-photo img { width: 100%; height: 250px; object-fit: cover; object-position: center 25%; border-radius: 14px; }
+.feature-images img, .store-photo img { width: 100%; height: 250px; object-fit: cover; object-position: var(--pet-focus, 50% 4%); border-radius: 14px; }
 .feature-images img:nth-child(2) { height: 205px; }
+.pet-photo-1 { --pet-focus: 50% -8%; }
+.pet-photo-2 { --pet-focus: 50% 0%; }
+.pet-photo-3 { --pet-focus: 50% 0%; }
+.pet-photo-4 { --pet-focus: 50% 24%; }
+.pet-photo-5 { --pet-focus: 50% -10%; }
 .feature-images.single-image { grid-template-columns: 1fr; }
 .feature-images.single-image img { height: clamp(360px, 92vw, 520px); }
 .store-photo { position: relative; }
@@ -150,7 +155,7 @@ address { font-style: normal; }
 .gallery-heading { display: flex; align-items: end; justify-content: space-between; gap: 20px; }
 .gallery-heading > a { color: var(--violet); font-size: 13px; font-weight: 800; }
 .gallery-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 7px; margin-top: 20px; }
-.gallery-grid img { width: 100%; aspect-ratio: 1; object-fit: cover; object-position: center 22%; border-radius: 10px; transition: transform .45s var(--ease-smooth), filter .45s ease; }
+.gallery-grid img { width: 100%; aspect-ratio: 1; object-fit: cover; object-position: var(--pet-focus, 50% 4%); border-radius: 10px; transition: transform .45s var(--ease-smooth), filter .45s ease; }
 .gallery-grid img:hover { transform: scale(1.025); filter: saturate(1.04); }
 
 .curve-divider { position: relative; z-index: 0; width: 100%; height: 76px; margin: 8px 0 -8px; overflow: hidden; pointer-events: none; }
